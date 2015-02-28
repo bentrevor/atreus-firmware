@@ -1,37 +1,36 @@
 int layer0[44] = {
 
-        KEY_P, KEY_O, KEY_I, KEY_U, KEY_Y, KEY_0, KEY_T, KEY_R, KEY_E, KEY_W, KEY_Q,
+        _____P_____ , _____O_____ , _____I_____ , _____U_____ , _____Y_____ ,         /**/ 0 /**/ ,       _____T_____ , _____R_____ , _____E_____ , _____W_____ , _____Q_____ ,
 
-        KEY_SEMICOLON, KEY_L, KEY_K, KEY_J, KEY_H, KEY_0, KEY_G, KEY_F, KEY_D, KEY_S, KEY_A,
+        _SEMICOLON_ , _____L_____ , _____K_____ , _____J_____ , _____H_____ ,         /**/ 0 /**/ ,       _____G_____ , _____F_____ , _____D_____ , _____S_____ , _____A_____ ,
 
-        KEY_SLASH, KEY_PERIOD, KEY_COMMA, KEY_M, KEY_N, KEYBOARD_LEFT_SHIFT, KEY_B, KEY_V, KEY_C, KEY_X, KEY_Z,
+        ___SLASH___ , __PERIOD___ , ___COMMA___ , _____M_____ , _____N_____ , M__SHIFT__M ,               _____B_____ , _____V_____ , _____C_____ , _____X_____ , _____Z_____ ,
 
-        KEY_ENTER, KEY_QUOTE, KEYBOARD_LEFT_ALT, KEYBOARD_LEFT_CTRL, KEY_SPACE, PRE_FUNCTION(1), KEY_BACKSPACE, KEYBOARD_LEFT_GUI, KEY_MINUS, KEY_TAB, KEY_ESC
+        ___ENTER___ , ___ENTER___ , M___ALT___M , M__CTRL___M , ___SPACE___ ,               M__FUNC___M , ___BKSP____ , M___CMD___M , ____TAB____ , ____TAB____ , ____ESC____
 
 };
 
 int layer1[44] = {
 
-        SHIFT(KEY_8), KEY_9, KEY_8, KEY_7, KEY_PAGE_UP, KEY_0, SHIFT(KEY_BACKSLASH), SHIFT(KEY_RIGHT_BRACE), SHIFT(KEY_LEFT_BRACE), SHIFT(KEY_2), SHIFT(KEY_1),
+        ___QUOTE___ , _____9_____ , _____8_____ , _____7_____ , SHIFT(___EQUAL___) ,        /**/ 0 /**/        , SHIFT(___TILDE___) , SHIFT(_R_SQ_BRKT_) , SHIFT(_L_SQ_BRKT_) , SHIFT(_____2_____) , ____TAB____        ,
 
-        SHIFT(KEY_EQUAL), KEY_6, KEY_5, KEY_4, KEY_PAGE_DOWN, KEY_0, KEY_TILDE, SHIFT(KEY_0), SHIFT(KEY_9), SHIFT(KEY_4), SHIFT(KEY_3),
+        ___ENTER___ , _____6_____ , _____5_____ , _____4_____ , ___EQUAL___        ,        /**/ 0 /**/        , ___TILDE___        , SHIFT(_____0_____) , SHIFT(_____9_____) , SHIFT(_____4_____) , SHIFT(_____3_____) ,
 
-        KEY_BACKSLASH, KEY_3, KEY_2, KEY_1, SHIFT(KEY_7), KEYBOARD_LEFT_SHIFT, SHIFT(KEY_TILDE), KEY_RIGHT_BRACE, KEY_LEFT_BRACE, SHIFT(KEY_6), SHIFT(KEY_5),
+        _BACKSLASH_ , _____3_____ , _____2_____ , _____1_____ , _____0_____        , M__SHIFT__M ,               ___MINUS___        , _R_SQ_BRKT_        , _L_SQ_BRKT_        , SHIFT(_____6_____) , SHIFT(_____5_____) ,
 
-        KEY_EQUAL, KEY_0, KEYBOARD_LEFT_ALT, KEYBOARD_LEFT_CTRL, KEY_SPACE, PRE_FUNCTION(1), KEY_BACKSPACE, KEYBOARD_LEFT_GUI, KEY_MINUS, SHIFT(KEY_INSERT), FUNCTION(2)
+        ___EQUAL___ , _____0_____ , M___ALT___M , M__CTRL___M , ___SPACE___        ,               M__FUNC___M , ___BKSP____        , M___CMD___M        , ___MINUS___        , SHIFT(__INSERT___) , FUNCTION(2)
 
 };
 
-// layer2.h reversed
 int layer2[44] = {
 
-        KEY_F10, KEY_F9, KEY_F8, KEY_F7, KEY_UP, KEY_0, KEY_PAGE_UP, KEY_END, KEY_UP, KEY_HOME, KEY_INSERT,
+        ____F10____ , ____F9_____ , ____F8_____ , ____F7_____ , ____UP_____ ,        /**/ 0 /**/        , ___PG_UP___ , ____END____ , ____UP_____ , ___HOME____ , __INSERT___ ,
 
-        KEY_F11, KEY_F6, KEY_F5, KEY_F4, KEY_DOWN, KEY_0, KEY_PAGE_DOWN, KEY_RIGHT, KEY_DOWN, KEY_LEFT, KEY_DELETE,
+        ____F11____ , ____F6_____ , ____F5_____ , ____F4_____ , ___DOWN____ ,        /**/ 0 /**/        , __PG_DOWN__ , ___RIGHT___ , ___DOWN____ , ___LEFT____ , __DELETE___ ,
 
-        KEY_F12, KEY_F3, KEY_F2, KEY_F1, 0, KEYBOARD_LEFT_SHIFT, 0, 0, 0, 0, 0,
+        ____F12____ , ____F3_____ , ____F2_____ , ____F1_____ , /**/ 0 /**/ , M__SHIFT__M ,               /**/ 0 /**/ , /**/ 0 /**/ , /**/ 0 /**/ , /**/ 0 /**/ , /**/ 0 /**/ ,
 
-        FUNCTION(0), 0, KEYBOARD_LEFT_ALT, KEYBOARD_LEFT_CTRL, KEY_SPACE, PRE_FUNCTION(1), KEY_BACKSPACE, KEYBOARD_LEFT_GUI, 0, FUNCTION(3), 0
+        FUNCTION(0) , /**/ 0 /**/ , M___ALT___M , M__CTRL___M , ___SPACE___ ,               M__FUNC___M , ___BKSP____ , M___CMD___M , /**/ 0 /**/ , FUNCTION(3) , /**/ 0 /**/
 
 };
 

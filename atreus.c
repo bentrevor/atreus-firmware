@@ -69,6 +69,7 @@ int last_presses[KEY_COUNT];
 
 #define LAYER(layer)          (MIN_LAYER        + (layer))
 #define FUNCTION(number)      (MIN_FUNCTION     + (number))
+#define M__FUNC___M           (MIN_PRE_FUNCTION + (1))
 #define PRE_FUNCTION(number)  (MIN_PRE_FUNCTION + (number))
 
 // layout.h must define:
@@ -77,6 +78,28 @@ int last_presses[KEY_COUNT];
 // ... plus any functions included in layer_functions
 // per_cycle void function callback
 #include "layout.h"
+
+/* void reverse_layers() { */
+/*         int reversed_layer0[44]; */
+/*         int reversed_layer1[44]; */
+/*         int reversed_layer2[44]; */
+
+/*         for (int row = 0; row < 4; row++) { */
+/*                 for (int column = 0; column < 11; column++) { */
+/*                         int layers_index = (row * 11) + column; */
+/*                         int reversed_index = (row * 11) + (10 - column); */
+
+/*                         reversed_layer0[reversed_index] = *layers[layers_index]; */
+/*                         reversed_layer1[reversed_index] = *layers[layers_index]; */
+/*                         reversed_layer2[reversed_index] = *layers[layers_index]; */
+/*                 } */
+/*         } */
+
+/*         layers[0] = reversed_layer0; */
+/*         layers[1] = reversed_layer1; */
+/*         layers[2] = reversed_layer2; */
+/* } */
+
 
 
 // Matrix scanning logic
@@ -156,19 +179,19 @@ void calculate_presses() {
     } else if(keycode >= MIN_LAYER && keycode <= MAX_LAYER) {
       // layer set
       current_layer_number = keycode - MIN_LAYER;
-    } else if(keycode == KEYBOARD_LEFT_CTRL) {
+    } else if(keycode == M__CTRL___M) {
       keyboard_modifier_keys |= KEY_LEFT_CTRL;
     } else if(keycode == KEYBOARD_RIGHT_CTRL) {
       keyboard_modifier_keys |= KEY_RIGHT_CTRL;
-    } else if(keycode == KEYBOARD_LEFT_SHIFT) {
+    } else if(keycode == M__SHIFT__M) {
       keyboard_modifier_keys |= KEY_LEFT_SHIFT;
     } else if(keycode == KEYBOARD_RIGHT_SHIFT) {
       keyboard_modifier_keys |= KEY_RIGHT_SHIFT;
-    } else if(keycode == KEYBOARD_LEFT_ALT) {
+    } else if(keycode == M___ALT___M) {
       keyboard_modifier_keys |= KEY_LEFT_ALT;
     } else if(keycode == KEYBOARD_RIGHT_ALT) {
       keyboard_modifier_keys |= KEY_RIGHT_ALT;
-    } else if(keycode == KEYBOARD_LEFT_GUI) {
+    } else if(keycode == M___CMD___M) {
       keyboard_modifier_keys |= KEY_LEFT_GUI;
     } else if(keycode == KEYBOARD_RIGHT_GUI) {
       keyboard_modifier_keys |= KEY_RIGHT_GUI;
@@ -209,6 +232,7 @@ void init() {
 };
 
 void clear_keys() {
+  /* reverse_layers(); */
   current_layer = layers[current_layer_number];
   keyboard_modifier_keys = 0;
   for(int i = 0; i < 6; i++) {
