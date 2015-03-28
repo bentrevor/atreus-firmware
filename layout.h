@@ -6,19 +6,19 @@ int layer0[44] = {
 
         ___SLASH___ , __PERIOD___ , ___COMMA___ , _____M_____ , _____N_____ , M__SHIFT__M ,               _____B_____ , _____V_____ , _____C_____ , _____X_____ , _____Z_____ ,
 
-        ___ENTER___ , ___ENTER___ , M___ALT___M , M__CTRL___M , ___SPACE___ ,               M__FUNC___M , ___BKSP____ , M___CMD___M , ____TAB____ , ____TAB____ , ____ESC____
+        ___ENTER___ , ___ENTER___ , M___ALT___M , M__CTRL___M , ___SPACE___ ,               M__FUNC___M , ___BKSP____ , M___CMD___M , ____TAB____ , SHIFT(_TAB_), ____ESC____
 
 };
 
 int layer1[44] = {
 
-        ___QUOTE___ , _____9_____ , _____8_____ , _____7_____ , SHIFT(___EQUAL___) ,        /**/ 0 /**/        , SHIFT(___TILDE___) , SHIFT(_R_SQ_BRKT_) , SHIFT(_L_SQ_BRKT_) , SHIFT(_____2_____) , ____TAB____        ,
+        _____0_____ , _____9_____ , _____8_____ , _____7_____ , _____6_____ ,        /**/ 0 /**/        , _____5_____ , _____4_____ , _____3_____ , _____2_____ , _____1_____ ,
 
-        ___ENTER___ , _____6_____ , _____5_____ , _____4_____ , ___EQUAL___        ,        /**/ 0 /**/        , ___TILDE___        , SHIFT(_____0_____) , SHIFT(_____9_____) , SHIFT(_____4_____) , SHIFT(_____3_____) ,
+        ___ENTER___ , ___QUOTE___ , ___EQUAL___ , ___MINUS___ , _BACKSLASH_ ,        /**/ 0 /**/        , SHIFT(__0__), SHIFT(__9__), _L_SQ_BRKT_ , SHIFT(_LSB_), ___TILDE___ ,
 
-        _BACKSLASH_ , _____3_____ , _____2_____ , _____1_____ , _____0_____        , M__SHIFT__M ,               ___MINUS___        , _R_SQ_BRKT_        , _L_SQ_BRKT_        , SHIFT(_____6_____) , SHIFT(_____5_____) ,
+        /**/ 0 /**/ , SHIFT(_QOT_), SHIFT(_EQL_), SHIFT(_MIN_), SHIFT(_BKS_), M__SHIFT__M ,               /**/ 0 /**/ , SHIFT(__0__), _R_SQ_BRKT_ , SHIFT(_RSB_), SHIFT(_TLD_),
 
-        ___EQUAL___ , _____0_____ , M___ALT___M , M__CTRL___M , ___SPACE___        ,               M__FUNC___M , ___BKSP____        , M___CMD___M        , ___MINUS___        , SHIFT(__INSERT___) , FUNCTION(2)
+        ___ENTER___ , FUNCTION(2) , M___ALT___M , M__CTRL___M , ___SPACE___ ,               M__FUNC___M , ___BKSP____ , M___CMD___M , ____TAB____ , SHIFT(_TAB_), ____ESC____
 
 };
 
