@@ -79,27 +79,6 @@ int last_presses[KEY_COUNT];
 // per_cycle void function callback
 #include "layout.h"
 
-/* void reverse_layers() { */
-/*         int reversed_layer0[44]; */
-/*         int reversed_layer1[44]; */
-/*         int reversed_layer2[44]; */
-
-/*         for (int row = 0; row < 4; row++) { */
-/*                 for (int column = 0; column < 11; column++) { */
-/*                         int layers_index = (row * 11) + column; */
-/*                         int reversed_index = (row * 11) + (10 - column); */
-
-/*                         reversed_layer0[reversed_index] = *layers[layers_index]; */
-/*                         reversed_layer1[reversed_index] = *layers[layers_index]; */
-/*                         reversed_layer2[reversed_index] = *layers[layers_index]; */
-/*                 } */
-/*         } */
-
-/*         layers[0] = reversed_layer0; */
-/*         layers[1] = reversed_layer1; */
-/*         layers[2] = reversed_layer2; */
-/* } */
-
 
 
 // Matrix scanning logic
@@ -232,7 +211,6 @@ void init() {
 };
 
 void clear_keys() {
-  /* reverse_layers(); */
   current_layer = layers[current_layer_number];
   keyboard_modifier_keys = 0;
   for(int i = 0; i < 6; i++) {
